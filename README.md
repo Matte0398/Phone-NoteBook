@@ -45,13 +45,13 @@ python MyPhoneNoteBook.py -m|--mod b [surname] [name] [new_phone_number] [new_de
 To remove a contact (you must include the first name for duplicate surnames):
 
 ``` python
-python MyPhoneNoteBook.py -r|--rem -r [surname]
+python MyPhoneNoteBook.py -r|--rem [surname]
 ```
 
 To search a contact:
 
 ``` python
-python MyPhoneNoteBook.py -s|--search -s surname [name]
+python MyPhoneNoteBook.py -s|--search surname [name]
 ```
 
 ## Example
