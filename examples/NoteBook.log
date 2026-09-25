@@ -1,0 +1,39 @@
+Date of execution: 25/09/2026 16:36:33
+
+Operation: add_contact
+
+Arguments:
+
+	Surname: Rossi
+	Name: Alice
+	Phone number: 0000000001
+	Description: Demo contact
+
+Contact (Rossi Alice) has been added in the csv file (NoteBook.csv)!
+
+-------------------------------------
+Date of execution: 25/09/2026 16:37:00
+
+Operation: add_contact
+
+Arguments:
+
+	Surname: Verdi
+	Name: Bob
+	Phone number: 0000000002
+
+Contact (Verdi Bob) has been added in the csv file (NoteBook.csv)!
+
+-------------------------------------
+Date of execution: 25/09/2026 16:37:23
+
+Operation: search_contact
+
+Arguments:
+
+	Surname: Rossi
+	Name: Alice
+
+Contact info: ROSSI; ALICE; 0000000001; Demo contact
+
+-------------------------------------
