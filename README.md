@@ -1,8 +1,8 @@
 # Phone NoteBook
 
-A Python command-line phone book that stores contacts in a local CSV file and records operations in a log file.
+A Python program that stores contacts in a local CSV file and records operations in a log file.
 
-The script supports adding, searching, modifying, and removing contacts, with argument validation and an operation log.
+The program supports adding, searching, modifying, and removing contacts, with argument validation and an operation log.
 
 ## Requirements
 
@@ -33,7 +33,7 @@ Display the command-line help:
 python MyPhoneNoteBook.py --help
 ```
 
-Running the script without arguments prints a usage error and exits with status `2`. Use `--help` for the full syntax and argument order; it exits with status `0`. Neither command creates the CSV or log file.
+Running the program without arguments prints a usage error and exits with status `2`. Use `--help` for the full syntax and argument order; it exits with status `0`. Neither command creates the CSV or log file.
 
 ## Usage
 
@@ -55,7 +55,7 @@ python MyPhoneNoteBook.py --add Verdi Bob 0000000002
 - Phone numbers must contain exactly 10 digits (`0-9`). Internal spaces, hyphens, and a leading `+` are not accepted. Leading zeros are preserved.
 - The description is optional.
 - Surnames and names are stored in uppercase; descriptions keep their original case.
-- The script rejects an existing surname/name combination using exact, case-insensitive matching.
+- The program rejects an existing surname/name combination using exact, case-insensitive matching.
 - After a successful addition, the CSV rows are sorted alphabetically.
 
 ### Search for a contact
@@ -81,7 +81,7 @@ python MyPhoneNoteBook.py --rem Rossi Alice
 python MyPhoneNoteBook.py -r Rossi
 ```
 
-If a surname matches multiple entries, supply the name as well. The script asks for confirmation: enter lowercase `y` to proceed; any other answer cancels the deletion.
+If a surname matches multiple entries, supply the name as well. The program asks for confirmation: enter lowercase `y` to proceed; any other answer cancels the deletion.
 
 Deleting the last remaining contact leaves an empty CSV file. Cancelling a deletion leaves the contacts unchanged and returns status `0`. A missing contact or an ambiguous surname returns status `1`.
 
@@ -109,7 +109,7 @@ Surname and name identify the contact using exact, case-insensitive matching; th
 
 ## Generated files
 
-Files are stored in the **current working directory**, which may differ from the directory containing the script. Run commands from the same directory to use the same phone book. There are no command-line options for changing the filenames.
+Files are stored in the **current working directory**, which may differ from the directory containing the program. Run commands from the same directory to use the same phone book. There are no command-line options for changing the filenames.
 
 | File           | Purpose                       | Behavior                                                                                                                                               |
 | -------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -131,11 +131,11 @@ ROSSI; ALICE; 0000000001; Demo contact
 VERDI; BOB; 0000000002
 ```
 
-When importing into a spreadsheet, choose `;` as the delimiter and treat phone numbers as text to preserve leading zeros. The script writes plain text without CSV quoting or escaping and rejects semicolons and line breaks in contact arguments. Blank lines are ignored when reading the file. Each successful write sorts the contact rows alphabetically.
+When importing into a spreadsheet, choose `;` as the delimiter and treat phone numbers as text to preserve leading zeros. The program writes plain text without CSV quoting or escaping and rejects semicolons and line breaks in contact arguments. Blank lines are ignored when reading the file. Each successful write sorts the contact rows alphabetically.
 
 ### Log format
 
-Logged operations include a timestamp, operation name, supplied contact details, and an outcome. Unexpected exceptions during file access or contact operations are recorded with the script arguments and a traceback when logging is available. Argument validation failures print an error to the terminal without writing a log entry. If the log cannot be written after an exception, a further error is printed to standard error.
+Logged operations include a timestamp, operation name, supplied contact details, and an outcome. Argument validation failures print an error to the terminal without writing a log entry. If the log cannot be written after an exception, a further error is printed to standard error.
 
 Both generated files can contain personal information: the log may retain contact details even after a contact is removed from the CSV.
 
