@@ -4,6 +4,27 @@ A Python program that stores contacts in a local CSV file and records operations
 
 The program supports adding, searching, modifying, and removing contacts, with argument validation and an operation log.
 
+## Contents
+
+- [Repository structure](#repository-structure)
+- [Requirements](#requirements)
+- [Quick start](#quick-start)
+- [Usage](#usage)
+- [Generated files](#generated-files)
+- [Example files](#example-files)
+
+## Repository structure
+
+```text
+Phone-NoteBook/
+|-- examples/
+|   |-- NoteBook.csv
+|   `-- NoteBook.log
+|-- LICENSE
+|-- PhoneNoteBook.py
+`-- README.md
+```
+
 ## Requirements
 
 - Python 3.6 or later (the script uses f-strings).
