@@ -6,12 +6,25 @@ The program supports adding, searching, modifying, and removing contacts, with a
 
 ## Contents
 
+- [Features](#features)
 - [Repository structure](#repository-structure)
 - [Requirements](#requirements)
 - [Quick start](#quick-start)
 - [Usage](#usage)
 - [Generated files](#generated-files)
 - [Example files](#example-files)
+- [License](#license)
+
+## Features
+
+- Add contacts with a surname, name, phone number, and optional description.
+- Search for contacts using exact, case-insensitive surname and name matching.
+- Update phone numbers, descriptions, or both.
+- Remove contacts with confirmation and detect ambiguous surnames.
+- Validate contact fields and reject duplicate surname/name combinations.
+- Store contacts in a local CSV file, sorted alphabetically after each successful write.
+- Record operations and errors in a timestamped log.
+- Run from the command line using only the Python standard library.
 
 ## Repository structure
 
@@ -31,8 +44,6 @@ Phone-NoteBook/
 - Read and write access to the directory where you run the commands.
 
 The application uses only the Python standard library. No packages need to be installed.
-
-The examples below use `python`. Depending on your environment, use `python3` or the Windows Python launcher, `py`, instead.
 
 ## Quick start
 
@@ -175,3 +186,7 @@ python ../PhoneNoteBook.py --add Rossi Alice 0000000001 "Demo contact"
 python ../PhoneNoteBook.py --add Verdi Bob 0000000002
 python ../PhoneNoteBook.py --search Rossi Alice
 ```
+
+## License
+
+See [LICENSE](LICENSE) for the project license.
